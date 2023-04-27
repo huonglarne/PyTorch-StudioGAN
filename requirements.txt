@@ -1,0 +1,21 @@
+# transformers==4.27
+# datasets >= 2.0.0
+# torch==1.7.1
+# evaluate
+# torchvision==0.8.2
+tqdm
+ninja
+h5py
+kornia
+matplotlib
+pandas
+sklearn
+scipy
+seaborn
+wandb
+PyYaml
+click
+requests
+pyspng
+imageio-ffmpeg
+timm
