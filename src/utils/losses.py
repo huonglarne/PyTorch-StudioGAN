@@ -77,8 +77,17 @@ class ConditionalContrastiveLoss(torch.nn.Module):
         return M[mask].view(h, -1)
 
     def _cosine_simililarity_matrix(self, x, y):
-        v = self.cosine_similarity(x.unsqueeze(1), y.unsqueeze(0))
+        try:
+            v = self.cosine_similarity(x.unsqueeze(1), y.unsqueeze(0))
+        except:
+            torch.save(x, "x.pt")
+            torch.save(y, "y.pt")
+            print(x, y)
+            print(type(x), type(y))
+            print(x.shape, y.shape)
+
         return v
+    
 
     def forward(self, embed, proxy, label, **_):
         if self.DDP:

@@ -1,8 +1,12 @@
+torch 1.7 not work
+
 pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 
 
 
 data path: '/nas/common_data/imagenet_tiny/'
+
+python3 src/main.py -t -metrics is fid prdc -data /nas/common_data/imagenet_tiny -mpc
 
 
 <p align="center">

@@ -9,7 +9,7 @@ h5py
 kornia
 matplotlib
 pandas
-sklearn
+scikit-learn
 scipy
 seaborn
 wandb
